@@ -42,7 +42,7 @@ public class CenterSeat implements Seat {
     
     @Getter
     @Setter
-    //@JsonIgnore
+    @JsonIgnore
     private Seat next;
     
     public static CenterSeat getInstance(int rowIdx, int colIdx, int clusterIndex) {

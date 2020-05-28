@@ -4,12 +4,14 @@ import com.test.squareshift.model.CenterSeat;
 import com.test.squareshift.model.Seat;
 
 import lombok.Getter;
+import lombok.Setter;
 
 public class CenterSeatFactory implements SeatFactory {
 
     private static final CenterSeatFactory INSTANCE = new CenterSeatFactory();
 
     @Getter
+    @Setter
     private Seat headNode;
 
     @Override

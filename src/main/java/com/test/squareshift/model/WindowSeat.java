@@ -42,7 +42,7 @@ public class WindowSeat implements Seat {
     
     @Getter
     @Setter
-    //@JsonIgnore
+    @JsonIgnore
     private Seat next;
     
     public static WindowSeat getInstance(int rowIdx, int colIdx, int clusterIndex) {

@@ -7,6 +7,7 @@ import com.test.squareshift.model.Seat;
 import com.test.squareshift.model.WindowSeat;
 
 import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author madhan
@@ -17,6 +18,7 @@ public class WindowSeatFactory implements SeatFactory {
     private static final WindowSeatFactory INSTANCE = new WindowSeatFactory();
 
     @Getter
+    @Setter
     private Seat headNode;
     
  

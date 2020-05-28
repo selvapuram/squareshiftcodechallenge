@@ -3,6 +3,8 @@
  */
 package com.test.squareshift.model;
 
+import java.io.Serializable;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -18,8 +20,13 @@ import lombok.Setter;
  */
 @Builder
 @Getter
-public class Cluster {
+public class Cluster implements Serializable {
     
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -5176484811574789143L;
+
     private int rowSize;
     
     private int colSize;
@@ -28,7 +35,9 @@ public class Cluster {
     
     private List<List<Seat>> seats;
     
+    
     @JsonIgnore
     @Setter
-    private Map<Integer, Map<SeatType, Seat>> lastInsertNode;
+    @Getter
+    private static Map<SeatType, Map<Integer, Seat[]>> lastInsertNode = new HashMap<>();
 }

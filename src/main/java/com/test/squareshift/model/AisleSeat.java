@@ -42,7 +42,7 @@ public class AisleSeat implements Seat {
     
     @Getter
     @Setter
-    //@JsonIgnore
+    @JsonIgnore
     private Seat next;
     
     

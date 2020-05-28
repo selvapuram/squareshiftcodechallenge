@@ -8,4 +8,10 @@ public interface SeatFactory {
     
     Seat getHeadNode();
     
+    void setHeadNode(Seat node);
+    
+    default void initializeHead() {
+        setHeadNode(null);
+    }
+    
 }
